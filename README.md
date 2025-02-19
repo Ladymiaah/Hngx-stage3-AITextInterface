@@ -1,8 +1,15 @@
-# React + Vite
+AI Translator, Summarizer & Language Detector (Chrome Inbuilt API)
+This is a React-based web application that leverages Chrome's inbuilt AI APIs to provide seamless language translation, text summarization, and language detection. The app allows users to enter text, detect its language, translate it into a selected target language, and generate concise summaries.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔹 Features
+🌍 Language Detection – Detects the input text language with confidence percentage.
+🔄 Text Translation – Translates text from English to French, Spanish, Portuguese, Russian, and Turkish using Chrome's AI translation API.
+✂️ Summarization – Generates concise summaries for long texts.
+⚡ Real-time Processing – Fast execution with a smooth user experience.
+🎨 Responsive UI – Built with React and Tailwind CSS for a modern look.
+🚀 How It Works
+Enter text in the input box.
+Detect the language automatically.
+Choose a target language and translate.
+If the text is long, click "Summarize" for a condensed version.
+Built with React, Tailwind, and Chrome AI APIs. 🔥
