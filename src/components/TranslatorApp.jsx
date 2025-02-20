@@ -115,7 +115,7 @@ const TranslatorApp = () => {
       {/* Text Area */}
       <div className="flex items-center gap-3 max-w-3xl">
         <textarea
-          className="w-full max-w-3xl p-3 text-white border border-[#9CA3AF] rounded-xl resize-none"
+          className="w-full max-w-3xl p-3 text-white border border-[#1F2937] rounded-xl resize-none"
           rows="4"
           placeholder="Enter text in English..."
           value={text}
