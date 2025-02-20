@@ -47,7 +47,8 @@ const TranslatorApp = () => {
           {detectedLanguage && (
             <div className="p-3 border border-[#9CA3AF]  rounded bg-[#1F2937]">
               <p>
-                I am {detectedLanguage.confidence?.toFixed(2)}% sure this is{" "}
+                I am {detectedLanguage.confidence * 100?.toFixed(2)}% sure this
+                is{" "}
                 {languageNames[detectedLanguage.detectedLanguage] || "Unknown"}.
               </p>
             </div>
