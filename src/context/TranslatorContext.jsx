@@ -43,7 +43,7 @@ export const TranslatorProvider = ({ children }) => {
 
   const handleMoveText = () => {
     if (!text.trim()) {
-      alert("Please enter some text.");
+      setError("Please enter some text.");
       return;
     }
 
@@ -56,7 +56,7 @@ export const TranslatorProvider = ({ children }) => {
 
   const handleTranslate = async () => {
     if (!submittedText.trim()) {
-      alert("No text to translate.");
+      setError("No text to translate.");
       return;
     }
 
@@ -65,7 +65,7 @@ export const TranslatorProvider = ({ children }) => {
 
     try {
       if (!window.ai || !window.ai.translator) {
-        alert("Chrome AI APIs are not enabled.");
+        setError("Chrome AI APIs are not enabled.");
         return;
       }
 
@@ -77,7 +77,7 @@ export const TranslatorProvider = ({ children }) => {
       const result = await translator.translate(submittedText);
       setTranslatedText(result);
     } catch (error) {
-      alert("Error translating text.");
+      setError("Error translating text.");
     } finally {
       setIsTranslating(false);
     }
@@ -85,7 +85,7 @@ export const TranslatorProvider = ({ children }) => {
 
   const handleSummarize = async () => {
     if (!submittedText.trim()) {
-      alert("No text to summarize.");
+      setError("No text to summarize.");
       return;
     }
 
@@ -94,7 +94,7 @@ export const TranslatorProvider = ({ children }) => {
 
     try {
       if (!window.ai || !window.ai.summarizer) {
-        alert("Chrome AI Summarization API is not available.");
+        setError("Chrome AI Summarization API is not available.");
         return;
       }
 
@@ -102,7 +102,7 @@ export const TranslatorProvider = ({ children }) => {
       const result = await summarizer.summarize(submittedText);
       setSummarizedText(result);
     } catch (error) {
-      alert("Error summarizing text.");
+      setError("Error summarizing text.");
     } finally {
       setIsSummarizing(false);
     }
